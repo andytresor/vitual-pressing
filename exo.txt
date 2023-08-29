@@ -1,0 +1,6 @@
+- Create interface type for data register
+- Create isPassword Method to verify password (Regex)
+- Create store service and save user data in localStorage
+- Disable submit button if form have errors
+- Create login
+- Find how to lock page in angular

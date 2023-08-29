@@ -1,0 +1,8 @@
+Register: (Methode par templates)
+
+1. Create form register (name, email, password, password-confirm) *;
+2. Add ngModel on fields *;
+
+3. Submbit:
+    - Valide data (email validation, password: (Capital letter, number, symbol), password === password confirm)
+    - Save data;
