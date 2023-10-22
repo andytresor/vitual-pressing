@@ -1,0 +1,144 @@
+<div class="pages">
+  <div class="main">
+    <aside>
+      <div class="top">
+        <div class="logo">
+          <img src="/assets/Apple.svg" alt="" />
+          <h2>
+            <span>{{ data.pressing_name }}</span>
+          </h2>
+        </div>
+        <div class="close" id="close-btn">
+          <img src="/assets/close_FILL0_wght400_GRAD0_opsz24.png" alt="" />
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a routerLink="/home">
+          <img src="/assets/grid_view_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Home</h3>
+        </a>
+        <a href="#" class="active">
+          <img src="/assets/person_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Profile</h3>
+        </a>
+        <a routerLink="/commands">
+          <img
+            src="/assets/receipt_long_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+          />
+          <h3>Drops</h3>
+        </a>
+        <a href="#">
+          <img src="/assets/mail_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Messages</h3>
+          <span class="message-count">26</span>
+        </a>
+        <a href="#">
+          <img src="/assets/report_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Reports</h3>
+        </a>
+        <a href="#">
+          <img src="/assets/settings_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Settings</h3>
+        </a>
+        <a href="#">
+          <img src="/assets/logout_FILL0_wght400_GRAD0_opsz24.svg" alt="" />
+          <h3>Logout</h3>
+        </a>
+      </div>
+    </aside>
+
+    <div class="try">
+      <form [formGroup]="dressForm" (submit)="submit(dressForm)">
+        <div class="box">
+          <div class="column-1">
+            <h4>Please fill the form</h4>
+            <div class="user-box">
+              <input type="text" />
+              <label for="">Agency</label>
+            </div>
+            <div class="user-box">
+              <input type="text" formControlName="name" />
+              <label for=""> Name</label>
+            </div>
+            <div class="user-box">
+              <input type="number" formControlName="number" />
+              <label for="">Number</label>
+            </div>
+            <label for="checkbox">
+              <input type="checkbox" />
+              Express.
+              <marquee behavior="" direction="">
+                <p>Note: Express charge is 2500FCFA</p>
+              </marquee>
+            </label>
+          </div>
+          <div class="column-2">
+            <div class="user-box">
+              <input type="date" formControlName="entry_date" />
+              <label for=""> Entry Date</label>
+            </div>
+            <div class="user-box">
+              <input type="date" formControlName="delivery_date" />
+              <label for=""> Delivery Date</label>
+            </div>
+          </div>
+        </div>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Dresses</th>
+              <th>Price(fcfa)</th>
+              <th>Number of pcs</th>
+              <th>total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let table of tables">
+              <td>{{ table.vetements }}</td>
+              <td>{{ table.prix }}</td>
+              <td><input type="number" /></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="parent">
+          <div class="sum">
+            <div class="total">
+              <label for="">Pieces: </label>
+              <input type="text" />
+            </div>
+            <div class="total">
+              <label for="">total: </label>
+              <input type="text" />
+            </div>
+            <div class="total">
+              <label for="">Avance: </label>
+              <input type="text" />
+            </div>
+            <div class="total">
+              <label for="">Reste: </label>
+              <input type="text" />
+            </div>
+            <button
+              class="facture"
+              type="submit"
+              [disabled]="dressForm.invalid"
+            >
+              facturation
+            </button>
+          </div>
+          <!-- <div class="submit">
+                    <button class="save">
+                        <img src="/assets/mail-message-chat-svgrepo-com.svg" alt="" width="25px" >Save
+                    </button> 
+                    <button class="save">
+                        <img src="/assets/whatsapp-svgrepo-com.svg" alt="" width="25px">save
+                    </button>
+                </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

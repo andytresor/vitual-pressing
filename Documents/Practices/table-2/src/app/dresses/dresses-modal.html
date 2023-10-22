@@ -1,0 +1,30 @@
+<mat-dialog-content>
+    <div class="sample">
+        <div class="head">
+            <h2>{{data.pressing_name}}</h2>
+            <h3>{{data.location}}</h3>
+            <h4 class="small">{{data.open}}</h4>
+            <img src={{data.img}} alt="">
+        
+     <button class="action_btn" role="button" (click)="sendDress(data)">Wash Your Dresses</button>
+            
+        </div>
+        <div>
+            <h2>List Of Dresses</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Dresses</th>
+                        <th>Prices(FCFA)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let iterm of data.iterms" >
+                        <td>{{iterm.vetements}}</td>
+                        <td>{{iterm.prix}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</mat-dialog-content>

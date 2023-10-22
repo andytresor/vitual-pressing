@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url("/assets/pressing.jpg");
+    background-color: rgba(0, 0, 0, 0.798);
+    background-blend-mode: multiply;
+    background-size:  cover;
+    background-position: center;
+}
+.sign-up {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.heading {
+  display: block;
+  margin: 25px;
+}
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #41f1b6;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+  
+  .alert div {
+    color: #820000;
+    padding: 5px;
+    margin-bottom: 0.5rem;
+    font-size: 15px;
+  }
+

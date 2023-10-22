@@ -1,0 +1,59 @@
+<body>
+  <app-nav-bar></app-nav-bar>
+  <div class="sign-in">
+    <div class="alert">
+      <p>{{error_message}}</p>
+    </div>
+  <form class="form" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <p class="title">Sign-in </p>
+      <p class="message">Signin now and get full access to our app. </p>    
+      <label>
+          <input required="" placeholder="" type="email" class="input" formControlName="email">
+          <span>Email</span>
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                class="alert">
+                <div *ngIf="email?.errors?.['required']">
+                  Email is required.
+                </div>
+                <div *ngIf="email?.errors?.['emailStrength']">
+                  Invalid Email.
+                </div>
+          </div>
+      </label> 
+          
+      <label>
+          <input required="" placeholder="" type="password" class="input" formControlName="password">
+          <span>Password</span>
+          <div *ngIf="loginForm.controls['password'].errors?.['invalid'] && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+                class="alert">
+  
+              <div *ngIf="loginForm.controls['password'].errors?.['required']">
+                Name is required.
+              </div>
+              <div *ngIf="loginForm.controls['password'].errors?.['minlength']">
+                Password must be at least 8 characters long.
+              </div>
+              <div *ngIf="loginForm.controls['password'].errors?.['passwordStrength']">
+              Your password must have lower case, upper case and numeric characters.
+              </div>
+            </div>
+      </label>
+  
+      <div class="under">
+          <span>
+               <a routerLink="/reset_password" class="link">
+                  forgot password?
+               </a></span>
+        </div>
+  
+      
+          <div class="" *ngIf="loginError">{{ loginError }}</div>
+      <button class="submit" [disabled]="loginForm.invalid">Submit</button>
+      
+      
+      <p class="signin">Don't have an acount ? <a routerLink="/sign-up">Register</a> </p>
+  </form>
+  
+  </div>
+</body>
+  

@@ -1,0 +1,87 @@
+<body>
+  <app-nav-bar></app-nav-bar>
+    <div class="sign-up">
+        <form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit(profileForm)">
+   
+            <p class="title">Register </p>
+            <p class="message">Signup now and get full access to our app. </p>
+             
+            <label>
+                <input required="" placeholder="" type="text" class="input" 
+                formControlName="name" >
+                <span>{{hero.name}}</span>    
+                <div *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                      class="alert">
+                    <div *ngIf="name?.errors?.['required']">
+                      Name is required.
+                    </div>
+                    <div *ngIf="name?.errors?.['minlength']">
+                      Name must be at least 4 characters long.
+                    </div>
+                  </div>
+            </label>
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input"
+                formControlName="email" required>
+                <span>{{hero.email}}</span>
+                <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                      class="alert">
+                      <div *ngIf="email?.errors?.['required']">
+                        Email is required.
+                      </div>
+                      <div *ngIf="email?.errors?.['emailStrength']">
+                        Invalid Email.
+                      </div>
+                </div>
+                <div class="alert" *ngIf="saveError">{{ saveError }}</div>
+            </label> 
+                
+            <label>
+                <input required="" placeholder="" type="password" class="input"
+                formControlName="password">
+                <span>{{hero.password}}</span>
+                <div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+                      class="alert">
+        
+                    <div *ngIf="password?.errors?.['required']">
+                      Name is required.
+                    </div>
+                    <div *ngIf="password?.errors?.['minlength']">
+                      Password must be at least 8 characters long.
+                    </div>
+                    <div *ngIf="password?.errors?.['passwordStrength']">
+                    Your password must have lower case, upper case and numeric characters.
+                    </div>
+                  </div>
+            </label>
+        
+            <label>
+                <input required="" placeholder="" type="password" class="input"
+                formControlName="confirmPassword">
+                <span>{{hero.confirmPassword}}</span>
+                <div *ngIf="confirmPassword?.valid && (confirmPassword?.dirty || confirmPassword?.touched)"
+                      class="alert alert-danger">
+        
+                    <div *ngIf="confirmPassword?.errors?.['required']">
+                      confirm Password is required.
+                    </div>
+                    <div *ngIf="confirmPassword?.errors?.['confirmPasswordValidation']">
+                        Confirm Password must match password
+                        </div>
+                </div>
+            </label>
+
+            <button class="submit" type="submit"
+            [disabled]="profileForm.invalid">Submit
+            </button>
+        
+            <p class="signin">Already have an acount ? 
+                <a routerLink="/sign-in">Signin</a> 
+            </p>
+        
+        </form>
+    </div>
+</body>
+   
+   

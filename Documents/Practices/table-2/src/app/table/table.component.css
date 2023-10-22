@@ -1,0 +1,28 @@
+body {
+    font-family: 'open Sans', sans-serif;
+    background-image: url("/assets/pressing.jpg");
+    background-color: rgba(0, 0, 0, 0.798);
+    background-blend-mode: multiply;
+    background-size:  cover;
+    background-position: center;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.welcome {
+    text-align: center;
+
+}
+
+h1 {
+    font-weight: bold;
+    line-height: 60px;
+    font-size: 3.5rem;
+    color: white;
+    text-align: center;
+}
+

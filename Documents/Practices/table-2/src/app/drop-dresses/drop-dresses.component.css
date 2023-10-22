@@ -1,0 +1,153 @@
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.content-table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+.content-table tbody tr.active-row{
+    font-weight: bold;
+    color: #009879;
+} 
+tr input{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    margin-left: 25px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;  
+}
+.try{
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+    width: 60vw;
+    height: fit-content;
+    padding: 40px;
+    background: #dddddd;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    margin: 50px 50px;
+}
+.parent{
+    position: relative;
+    margin: 40px 50px;
+}
+.sum {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    background: #dddddd;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    
+}
+.box h4 {
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    color: #009879;
+}
+.box .user-box{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.box .user-box input {
+    width: 90%;
+    padding: 1px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    background: transparent;
+}
+.sum .total input{
+    width: 20%;
+    margin-top: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    margin-left: 25px;
+}
+ .facture {
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+    padding:10px 50px;
+    border: none;
+    background: #009879;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    
+}
+.save{
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+    padding:5px 30px;
+    border: none;
+    background: #009879;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0 20px 10px;
+}
+.box .user-box label {
+    position: relative;
+    padding: 1px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+.box .user-box input:focus~label,
+.box .user-box input:valid~label{
+    top: -1px;
+    left: 0;
+    color: #009879;
+    font-size: 12px;
+}
+
+button .show-modal{
+    position: relative;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+} 
+
+

@@ -1,0 +1,22 @@
+.sample {
+    width: 65vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.head {
+    text-align: center;
+}
+ h2 {
+    font-size: 2rem;
+    font-weight: 300;
+ }
+
+img {
+    width: 25rem;
+    border-radius: 10px;
+}
+
+.action_btn {
+    margin: 5rem;
+}
